@@ -1,4 +1,4 @@
-package Praktikum2.MailyProject.src.main;
+package praktikum2.mailysproject.src.main;
 
 public abstract class Grafik {
 
@@ -21,12 +21,16 @@ public abstract class Grafik {
 
     @Override
     public String toString() {
-        return "Grafik: x=" + x + ", y=" + y + ", color=" + color;
+        return "Grafik: x=" + getX() + ", y=" + getY() + ", color=" + getColor();
     }
 
     public Grafik(int x, int y, String color) {
-        getX();
-        getY();
-        getColor();
+        this.x = x;
+        this.y = y;
+        this.color = color;
+    }
+
+    public void draw() {
+        
     }
 }
