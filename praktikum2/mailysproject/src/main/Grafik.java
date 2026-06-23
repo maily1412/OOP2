@@ -6,19 +6,14 @@ public abstract class Grafik {
     private String farbe;
 
 
-    public int setzeX(int x) {
-        this.x = x;
-        return x;
+    public void setzePosition(int positionX, int positionY){
+        x = positionX;
+        y = positionY;
     }
 
-    public int setzeY(int y) {
-        this.y = y;
-        return y;
-    }
 
-    public String setzeFarbe(String farbe) {
+    public void setzeFarbe(String farbe) {
         this.farbe = farbe;
-        return farbe;
     }
 
 
@@ -29,12 +24,15 @@ public abstract class Grafik {
 
     
     public Grafik(int x, int y, String farbe) {
-        setzeX(x);
-        setzeY(y);
+        setzePosition(x, y);
         setzeFarbe(farbe);
     }
 
-    public void draw() {
-        
-    }
+
+
+     /*
+    Fehler: Abstrakte Methode bedeutet, dass die Klasse auch abstrakt sein muss.
+    */
+    public abstract void draw();
+
 }

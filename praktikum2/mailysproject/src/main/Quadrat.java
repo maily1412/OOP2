@@ -9,9 +9,19 @@ public class Quadrat extends Grafik {
         setzeSeitenlaenge(seitenlaenge);
     }
 
-    public int setzeSeitenlaenge(int seitenlaenge) {
+    public void setzeSeitenlaenge(int seitenlaenge) {
         this.seitenlaenge = seitenlaenge;
-        return seitenlaenge;
+    }
+
+
+    public String toString(){
+        return super.toString() + ", seitenlaenge=" + this.seitenlaenge;
+    }
+
+
+    @Override
+    public void draw() {
+        System.out.println("Zeichne Quadrat");
     }
 
     
